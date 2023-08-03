@@ -1,6 +1,6 @@
 A simple search page, which includes bing and baidu. 🤩
 
-You can access it at [Ship](https://loveminimal.github.io/ship/).
+You can access it at [DEMO](https://peterson047.github.io/wpp-link-generator/).
 
 ## Quick Start
 

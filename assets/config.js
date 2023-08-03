@@ -9,7 +9,7 @@ const config = {
 		//Walkssi: '//walkssi.com',
 		//Nav: '//walkssi.com/nav',
 		// Archive: '//walkssi.com/archive',
-		Blog: '//walkssi.com/posts',
+		Blog: '//x',
 		// Github: '//github.com/loveminimal',
 		// Bilibili: '//bilibili.com',
 		Youtube: '//youtube.com',
