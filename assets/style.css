@@ -1,5 +1,6 @@
 @import url(taobao.css);
 @import url(dark.css);
+@import url('https://fonts.googleapis.com/css2?family=Handjet&display=swap');
 
 html {
 	font-size: 100px;
@@ -41,6 +42,7 @@ input[type=number] {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	font-size: 43px;
 }
 
 .header {
@@ -98,11 +100,13 @@ input[type=number] {
 
 .content #search #sc-input:focus {
 	border-color: #27f00d;
+	font-size: .3rem;
 }
 
 .content #search #sc-input::placeholder {
-	color: rgba(0, 0, 0, .3);
-	font-family: 'Segoe script';
+	font-size: .3rem;
+	color: rgba(0, 0, 0, 0.986);
+	font-family: 'Handjet', cursive;
 }
 
 .content #engine {
@@ -111,16 +115,18 @@ input[type=number] {
 }
 
 .content #engine .activated {
-	background: #ccc;
+	background: #cccccc;
 }
 
 .content #engine span {
+	font-size: .3rem;
 	cursor: pointer;
 	display: inline-block;
-	background: #eee;
-	padding: 2px 4px;
+	background: #0ccf0cea;
+	padding: 4px 4px;
 	border-radius: 4px;
-	width: 64px;
+	width: 1.1rem;
+	color: #ffffff;
 }
 
 .content #engine span:hover {
@@ -171,8 +177,8 @@ input[type=number] {
 		local("Jost-Regular"),
 		local("Jost* Book"),
 		local("Jost-Book"),
-		url("../fonts/jost/jost-v4-latin-regular.woff2") format("woff2"),
-		url("../fonts/jost/jost-v4-latin-regular.woff") format("woff");
+		url("../fonts/jost/Handjet-Medium.ttf") format("woff2"),
+		url("../fonts/jost/Handjet-Medium.ttf") format("woff");
 	/* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 

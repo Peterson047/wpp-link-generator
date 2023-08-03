@@ -151,3 +151,32 @@ function openWhatsApp() {
 		window.open(url, "_blank");
 	}
 }
+
+const inputElement = document.getElementById('sc-input');
+const placeholderText = 'Digite ou cole o número';
+
+// Event listener for when the input field gains focus
+inputElement.addEventListener('focus', function () {
+	this.placeholder = '';
+});
+
+// Event listener for when the input field loses focus
+inputElement.addEventListener('blur', function () {
+	this.placeholder = placeholderText;
+});
+
+// Function to clear the input field value when '✖' is clicked
+function clearVal() {
+	inputElement.value = '';
+}
+
+// Function to handle the search event
+function search(event) {
+	// Your search logic here...
+}
+
+// Function to handle the input event
+function reactive() {
+	// Your reactive logic here...
+}
+
