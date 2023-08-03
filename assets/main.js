@@ -19,7 +19,7 @@ init();
 function init() {
 	scInput.focus();
 	scClear.style = 'opacity: 0;'
-	
+
 	let curId = localStorage.getItem('curId')
 	cur = curId ? document.querySelector(curId) : document.querySelector(defaultId);
 
@@ -39,7 +39,7 @@ function initNav() {
 	nav.innerHTML = _str;
 }
 
-function search (e) {
+function search(e) {
 	if (e && e.keyCode !== 13) return;
 
 	if (urlRegexp.test(scVal)) {
@@ -67,28 +67,28 @@ function search (e) {
 function select(e) {
 	let _id = '#' + e.target.id;
 	if (_id === '#engine') return;
-	
+
 	cur = document.querySelector(_id);
 	localStorage.setItem('curId', _id)
 
 	eby.className = '';
 	ebd.className = '';
 	ego.className = '';
-	
+
 
 	cur.className = 'activated';
 	if (scVal) search();
 }
 
 function clearVal() {
-    if (!scInput.value) return;
-    scInput.value = '';    
-    reactive();
+	if (!scInput.value) return;
+	scInput.value = '';
+	reactive();
 }
 
 function reactive() {
-    scVal = scInput.value.trim();
-    scClear.style = scVal ? 'opacity: 1' : 'opacity: 0';
+	scVal = scInput.value.trim();
+	scClear.style = scVal ? 'opacity: 1' : 'opacity: 0';
 	scInput.focus();
 }
 
@@ -111,13 +111,43 @@ function toggleColor() {
 }
 
 function getDarkOfLocalStorage() {
-    return localStorage.getItem('dark');
+	return localStorage.getItem('dark');
 }
 
 function setDarkOfLocalStorage(flag) {
-    localStorage.setItem('dark', flag);
+	localStorage.setItem('dark', flag);
 }
 
 function delDarkOfLocalStorage() {
-    localStorage.removeItem('dark');
+	localStorage.removeItem('dark');
+}
+//input e generate
+
+function search(event) {
+	if (event.keyCode === 13) { // 13 is the Enter key code
+		openWhatsApp();
+	}
+}
+
+function reactive() {
+	// If you want to do something when the input text changes, you can add code here
+}
+
+function clearVal() {
+	document.getElementById("sc-input").value = "";
+}
+
+function openWhatsApp() {
+	var inputValue = document.getElementById("sc-input").value;
+	if (inputValue) {
+		// Remove all non-numeric characters from the input value
+		var phone = inputValue.replace(/\D/g, "");
+		if (phone === "") {
+			// If the input value has no numeric characters, show an error message
+			alert("Por favor, insira apenas números válidos.");
+			return;
+		}
+		var url = "https://api.whatsapp.com/send?l=pt_br&phone=" + phone;
+		window.open(url, "_blank");
+	}
 }
