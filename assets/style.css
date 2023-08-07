@@ -75,11 +75,13 @@ input[type=number] {
 	position: relative;
 }
 
+
 .content #search #sc-clear {
 	cursor: pointer;
-	transition: .5s opacity ease;
+	transition: .5s ease;
 	position: absolute;
 	top: 45px;
+	opacity: ;
 }
 
 
@@ -90,12 +92,13 @@ input[type=number] {
 	outline-style: none;
 	border: 0px;
 	border-bottom: 2px solid #208d0a;
-	padding: 12px 0;
+	padding: .1rem 0;
 	/* padding-left: 32px; */
 	/* max-width: 500px; */
 	/* min-width: 500px; */
-	width: 500px;
+	width: 5.2rem;
 	/* background: rgba(255, 255, 255, 0); */
+	font-size: .3rem;
 }
 
 .content #search #sc-input:focus {

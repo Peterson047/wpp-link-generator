@@ -18,7 +18,7 @@ init();
 
 function init() {
 	scInput.focus();
-	scClear.style = 'opacity: 0;'
+	scClear.style = 'opacity: 1;'
 
 	let curId = localStorage.getItem('curId')
 	cur = curId ? document.querySelector(curId) : document.querySelector(defaultId);
@@ -152,31 +152,12 @@ function openWhatsApp() {
 	}
 }
 
-const inputElement = document.getElementById('sc-input');
-const placeholderText = 'Digite ou cole o número';
+const inputField = document.getElementById('sc-input');
+const placeholderText = 'Digite ou cole um número';
 
-// Event listener for when the input field gains focus
-inputElement.addEventListener('focus', function () {
-	this.placeholder = '';
+inputField.addEventListener('click', () => {
+	if (inputField.value === placeholderText) {
+		inputField.value = '';
+	}
 });
-
-// Event listener for when the input field loses focus
-inputElement.addEventListener('blur', function () {
-	this.placeholder = placeholderText;
-});
-
-// Function to clear the input field value when '✖' is clicked
-function clearVal() {
-	inputElement.value = '';
-}
-
-// Function to handle the search event
-function search(event) {
-	// Your search logic here...
-}
-
-// Function to handle the input event
-function reactive() {
-	// Your reactive logic here...
-}
 
